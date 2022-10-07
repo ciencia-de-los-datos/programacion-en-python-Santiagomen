@@ -42,8 +42,7 @@ def pregunta_02():
 
     """
     import collections
-    with open('data.csv', 'r') as file:
-        lector = csv.reader(file, delimiter='\t')
+   
         dic = {}
         lista=[]
         for row in lector:
@@ -75,9 +74,7 @@ def pregunta_03():
     ]
 
     """
-    import collections
-    with open('data.csv', 'r') as file:
-        lector = csv.reader(file, delimiter='\t')
+   
         dic = {}
         lista=[]
         for row in lector:
@@ -116,8 +113,7 @@ def pregunta_04():
     ]
 
     """
-    with open('data.csv', 'r') as file:
-    lector = csv.reader(file, delimiter='\t')
+   
     dic2={}
     lista=[]
     for row in lector:
@@ -147,9 +143,7 @@ def pregunta_05():
     ]
 
     """
-    import collections
-    with open('data.csv', 'r') as file:
-        lector = csv.reader(file, delimiter='\t')
+    
         dic = {}
         lista=[]
 
@@ -192,9 +186,7 @@ def pregunta_06():
     ]
 
     """
-    import collections
-    with open('data.csv', 'r') as file:
-        lector = csv.reader(file, delimiter='\t')
+    
         dic = {}
         for row in lector:
             fil1 = row[4].split(sep = ",")
@@ -234,9 +226,7 @@ def pregunta_07():
     ]
 
     """
-    import collections
-    with open('data.csv', 'r') as file:
-        lector = csv.reader(file, delimiter='\t')
+   
         dic = {}
         lista=[]
 
@@ -275,9 +265,7 @@ def pregunta_08():
     ]
 
     """
-    import collections
-    with open('data.csv', 'r') as file:
-        lector = csv.reader(file, delimiter='\t')
+ 
         dic = {}
         lista=[]
 
@@ -316,9 +304,7 @@ def pregunta_09():
     }
 
     """
-    import collections
-    with open('data.csv', 'r') as file:
-        lector = csv.reader(file, delimiter='\t')
+ 
         dic = {}
         for row in lector:
             fil1 = row[4].split(sep = ",")
@@ -353,10 +339,8 @@ def pregunta_10():
 
 
     """
-    import collections
-    with open('data.csv', 'r') as file:
-        lector = csv.reader(file, delimiter='\t')
-        #dic = {}
+  
+       
         unit=[]
 
         for row in lector:
@@ -389,9 +373,7 @@ def pregunta_11():
 
 
     """
-    import collections
-    with open('data.csv', 'r') as file:
-        lector = csv.reader(file, delimiter='\t')
+
         dic = {}
         for row in lector:
             fil1 = row[3].split(sep = ",")
@@ -419,8 +401,7 @@ def pregunta_12():
     }
 
     """
-    with open('data.csv', 'r') as file:
-        lector = csv.reader(file, delimiter='\t')
+ 
         dic = {}
         for row in lector:
           spl1 = row[4].split(',')
