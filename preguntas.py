@@ -311,7 +311,7 @@ def pregunta_08():
 
     ord ={k: sorted(v) for k,v in dic.items()}           
     dic_sorted = sorted(ord.items())
-    dic_sorted
+    
     return dic_sorted
 
 
@@ -336,19 +336,24 @@ def pregunta_09():
 
     """
  
-    dic = {}
-    for row in lector:
-        fil1 = row[4].split(sep = ",")
-        for x in fil1:
-            fil2 = x.split(sep = ":")
-            if fil2[0] in dic:
-               dic[fil2[0]] = dic[fil2[0]] + 1
-            else:
-               dic[fil2[0]] = 1
+    import collections
+    import csv
+    with open('data.csv', 'r') as file:
+        lector = csv.reader(file, delimiter='\t')
+        dic = {}
+        for row in lector:
+            fil1 = row[4].split(sep = ",")
+            for x in fil1:
+                fil2 = x.split(sep = ":")
+                if fil2[0] in dic:
+                   dic[fil2[0]] = dic[fil2[0]] + 1
+                else:
+                   dic[fil2[0]] = 1
 
     dic_sorted = sorted(dic.items())
     dic1_sorted = dict(dic_sorted)
     
+
     return dic1_sorted
 
 
@@ -371,17 +376,20 @@ def pregunta_10():
 
     """
   
-       
-    unit=[]
+    import collections
+    import csv
+    with open('data.csv', 'r') as file:
+        lector = csv.reader(file, delimiter='\t')
+        #dic = {}
+        unit=[]
 
-    for row in lector:
-        letra = row[0]
-        cont1 = row[3].split(sep = ",")
-        cont2 = row[4].split(sep = ",")
-        largo1 = len(cont1)
-        largo2 = len(cont2)
-        unit.append((letra, largo1, largo2))
-
+        for row in lector:
+            letra = row[0]
+            cont1 = row[3].split(sep = ",")
+            cont2 = row[4].split(sep = ",")
+            largo1 = len(cont1)
+            largo2 = len(cont2)
+            unit.append((letra, largo1, largo2))
 
     return unit
 
@@ -404,12 +412,15 @@ def pregunta_11():
 
 
     """
-
-    dic = {}
-    for row in lector:
-        fil1 = row[3].split(sep = ",")
-        for sp in fil1:
-            dic[sp] = dic.get(sp,0)+int(row[1])
+    import collections
+    import csv
+    with open('data.csv', 'r') as file:
+        lector = csv.reader(file, delimiter='\t')
+        dic = {}
+        for row in lector:
+            fil1 = row[3].split(sep = ",")
+            for sp in fil1:
+                dic[sp] = dic.get(sp,0)+int(row[1])
 
     dic_sorted = sorted(dic.items())
     dic1_sorted = dict(dic_sorted)
@@ -432,18 +443,21 @@ def pregunta_12():
     }
 
     """
- 
-    dic = {}
-    for row in lector:
-      spl1 = row[4].split(',')
-      aux = 0
-      for sp in spl1:
-        numero = sp.split(':')[1]
-        aux = int(numero)
-        if row[0] in dic:
-           dic[row[0]] = dic[row[0]] + aux
-        else:
-           dic[row[0]] = aux
+    import collections
+    import csv
+    with open('data.csv', 'r') as file:
+        lector = csv.reader(file, delimiter='\t')
+        dic = {}
+        for row in lector:
+          spl1 = row[4].split(',')
+          aux = 0
+          for sp in spl1:
+            numero = sp.split(':')[1]
+            aux = int(numero)
+            if row[0] in dic:
+               dic[row[0]] = dic[row[0]] + aux
+            else:
+               dic[row[0]] = aux
 
     dic_sorted = sorted(dic.items())
     dic1_sorted = dict(dic_sorted)
