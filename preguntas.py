@@ -121,15 +121,19 @@ def pregunta_04():
 
     """
 
-        
-    dic2={}
-    lista=[]
-    for row in lector:
-        mes = row[2].split(sep = '-')[1]
-        if mes in dic2:
-           dic2[mes] = dic2[mes] + 1
-        else:
-           dic2[mes] = 1
+    import collections
+    import csv
+    with open('data.csv', 'r') as file:
+        lector = csv.reader(file, delimiter='\t')
+        dic2={}
+        lista=[]
+        for row in lector:
+            mes = row[2].split(sep = '-')[1]
+            
+            if mes in dic2:
+               dic2[mes] = dic2[mes] + 1
+            else:
+               dic2[mes] = 1
 
     dic_sorted = sorted(dic2.items())
     
