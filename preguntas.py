@@ -203,9 +203,30 @@ def pregunta_06():
     ]
 
     """
+    import collections
+    import csv 
+    with open('data.csv', 'r') as file:
+        lector = csv.reader(file, delimiter='\t')
+        dic = {}
+        for row in lector:
+            fil1 = row[4].split(sep = ",")
+            for x in fil1:
+                fil2 = x.split(sep = ":")
+                if fil2[0] in dic:
+                   dic[fil2[0]].append(int(fil2[1]))
+                else:
+                   dic[fil2[0]] = [int(fil2[1])]
+
+    dic_sorted = sorted(dic.items())
+    lista = list(dic_sorted)
+
+    lista_2 = []
+    for i in range(5):
+        lista_2 = lista_2 +[(lista[i][0], max(lista[i][1]), min(lista[i][1]))]
+
     
  
-    return
+    return lista_2
 
 
 def pregunta_07():
