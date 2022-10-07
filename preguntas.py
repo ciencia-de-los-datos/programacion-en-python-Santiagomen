@@ -43,16 +43,16 @@ def pregunta_02():
     """
     import collections
    
-        dic = {}
-        lista=[]
-        for row in lector:
-            letra = row[0]
+    dic = {}
+    lista=[]
+    for row in lector:
+        letra = row[0]
 
-            if letra in dic:
-               dic[letra] = dic[letra]+ 1
+        if letra in dic:
+           dic[letra] = dic[letra]+ 1
 
-            else:
-               dic[letra] = 1
+        else:
+           dic[letra] = 1
 
     dic_sorted = sorted(dic.items())
     
@@ -75,16 +75,16 @@ def pregunta_03():
 
     """
    
-        dic = {}
-        lista=[]
-        for row in lector:
-            letra = row[0]
+    dic = {}
+    lista=[]
+    for row in lector:
+        letra = row[0]
 
-            if letra in dic:
-               dic[letra] = dic[letra] + int(row[1])
+        if letra in dic:
+           dic[letra] = dic[letra] + int(row[1])
 
-            else:
-               dic[letra] = int(row[1])
+        else:
+           dic[letra] = int(row[1])
 
     dic_sorted = sorted(dic.items())
     
@@ -144,16 +144,16 @@ def pregunta_05():
 
     """
     
-        dic = {}
-        lista=[]
+    dic = {}
+    lista=[]
 
-        for row in lector:
-            letra = row[0]
+    for row in lector:
+        letra = row[0]
 
-            if letra in dic:
-               dic[letra].append(int(row[1]))
-            else:
-               dic[letra] = [int(row[1])]
+        if letra in dic:
+           dic[letra].append(int(row[1]))
+        else:
+           dic[letra] = [int(row[1])]
 
     dic_sorted = sorted(dic.items())
 
@@ -187,21 +187,22 @@ def pregunta_06():
 
     """
     
-        dic = {}
-        for row in lector:
-            fil1 = row[4].split(sep = ",")
-            for x in fil1:
-                fil2 = x.split(sep = ":")
-                if fil2[0] in dic:
-                   dic[fil2[0]].append(int(fil2[1]))
-                else:
-                   dic[fil2[0]] = [int(fil2[1])]
+    dic = {}
+    for row in lector:
+        fil1 = row[4].split(sep = ",")
+        for x in fil1:
+            fil2 = x.split(sep = ":")
+            if fil2[0] in dic:
+               dic[fil2[0]].append(int(fil2[1]))
+            else:
+               dic[fil2[0]] = [int(fil2[1])]
 
     dic_sorted = sorted(dic.items())
 
     lista = list(dic_sorted)
     for i,j in lista:
         print(str(i),min(j), max(j), sep=",", end ="\n")
+    
     return
 
 
@@ -227,16 +228,16 @@ def pregunta_07():
 
     """
    
-        dic = {}
-        lista=[]
+    dic = {}
+    lista=[]
 
-        for row in lector:
-            numero = row[1]
+    for row in lector:
+        numero = row[1]
 
-            if numero in dic:
-               dic[numero].append(row[0])
-            else:
-               dic[numero] = [(row[0])]
+        if numero in dic:
+           dic[numero].append(row[0])
+        else:
+           dic[numero] = [(row[0])]
 
     dic_sorted = sorted(dic.items())
     
@@ -266,17 +267,17 @@ def pregunta_08():
 
     """
  
-        dic = {}
-        lista=[]
+    dic = {}
+    lista=[]
 
-        for row in lector:
-            numero = row[1]
+    for row in lector:
+        numero = row[1]
 
-            if numero in dic:
-                if row[0] not in dic[numero]:
-                  dic[numero].append(row[0])
-            else:
-               dic[numero] = [(row[0])]
+        if numero in dic:
+            if row[0] not in dic[numero]:
+              dic[numero].append(row[0])
+        else:
+           dic[numero] = [(row[0])]
 
     ord ={k: sorted(v) for k,v in dic.items()}           
     dic_sorted = sorted(ord.items())
@@ -305,15 +306,15 @@ def pregunta_09():
 
     """
  
-        dic = {}
-        for row in lector:
-            fil1 = row[4].split(sep = ",")
-            for x in fil1:
-                fil2 = x.split(sep = ":")
-                if fil2[0] in dic:
-                   dic[fil2[0]] = dic[fil2[0]] + 1
-                else:
-                   dic[fil2[0]] = 1
+    dic = {}
+    for row in lector:
+        fil1 = row[4].split(sep = ",")
+        for x in fil1:
+            fil2 = x.split(sep = ":")
+            if fil2[0] in dic:
+               dic[fil2[0]] = dic[fil2[0]] + 1
+            else:
+               dic[fil2[0]] = 1
 
     dic_sorted = sorted(dic.items())
     dic1_sorted = dict(dic_sorted)
@@ -341,17 +342,17 @@ def pregunta_10():
     """
   
        
-        unit=[]
+    unit=[]
 
-        for row in lector:
-            letra = row[0]
-            cont1 = row[3].split(sep = ",")
-            cont2 = row[4].split(sep = ",")
-            largo1 = len(cont1)
-            largo2 = len(cont2)
-            unit.append((letra, largo1, largo2))
+    for row in lector:
+        letra = row[0]
+        cont1 = row[3].split(sep = ",")
+        cont2 = row[4].split(sep = ",")
+        largo1 = len(cont1)
+        largo2 = len(cont2)
+        unit.append((letra, largo1, largo2))
 
-    
+
     return unit
 
 
@@ -374,11 +375,11 @@ def pregunta_11():
 
     """
 
-        dic = {}
-        for row in lector:
-            fil1 = row[3].split(sep = ",")
-            for sp in fil1:
-                dic[sp] = dic.get(sp,0)+int(row[1])
+    dic = {}
+    for row in lector:
+        fil1 = row[3].split(sep = ",")
+        for sp in fil1:
+            dic[sp] = dic.get(sp,0)+int(row[1])
 
     dic_sorted = sorted(dic.items())
     dic1_sorted = dict(dic_sorted)
@@ -402,17 +403,17 @@ def pregunta_12():
 
     """
  
-        dic = {}
-        for row in lector:
-          spl1 = row[4].split(',')
-          aux = 0
-          for sp in spl1:
-            numero = sp.split(':')[1]
-            aux = int(numero)
-            if row[0] in dic:
-               dic[row[0]] = dic[row[0]] + aux
-            else:
-               dic[row[0]] = aux
+    dic = {}
+    for row in lector:
+      spl1 = row[4].split(',')
+      aux = 0
+      for sp in spl1:
+        numero = sp.split(':')[1]
+        aux = int(numero)
+        if row[0] in dic:
+           dic[row[0]] = dic[row[0]] + aux
+        else:
+           dic[row[0]] = aux
 
     dic_sorted = sorted(dic.items())
     dic1_sorted = dict(dic_sorted)
