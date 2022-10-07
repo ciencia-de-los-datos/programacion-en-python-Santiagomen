@@ -79,6 +79,7 @@ def pregunta_03():
     """
 
     import collections
+    import csv
     with open('data.csv', 'r') as file:
         lector = csv.reader(file, delimiter='\t')
         dic = {}
