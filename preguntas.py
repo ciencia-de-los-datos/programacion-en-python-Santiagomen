@@ -155,25 +155,7 @@ def pregunta_05():
     ]
 
     """
-    
-    dic = {}
-    lista=[]
-
-    for row in lector:
-        letra = row[0]
-
-        if letra in dic:
-           dic[letra].append(int(row[1]))
-        else:
-           dic[letra] = [int(row[1])]
-
-    dic_sorted = sorted(dic.items())
-
-    lista = list(dic_sorted)
-    for i,j in lista:
-        print(str(i), max(j),min(j), sep=",", end ="\n")
-        
-    return
+  
 
 
 def pregunta_06():
@@ -199,22 +181,7 @@ def pregunta_06():
 
     """
     
-    dic = {}
-    for row in lector:
-        fil1 = row[4].split(sep = ",")
-        for x in fil1:
-            fil2 = x.split(sep = ":")
-            if fil2[0] in dic:
-               dic[fil2[0]].append(int(fil2[1]))
-            else:
-               dic[fil2[0]] = [int(fil2[1])]
-
-    dic_sorted = sorted(dic.items())
-
-    lista = list(dic_sorted)
-    for i,j in lista:
-        print(str(i),min(j), max(j), sep=",", end ="\n")
-    
+ 
     return
 
 
