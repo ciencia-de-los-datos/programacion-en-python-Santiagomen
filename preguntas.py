@@ -155,8 +155,31 @@ def pregunta_05():
     ]
 
     """
-  
+    import collections
+    import csv
+    with open('data.csv', 'r') as file:
+        lector = csv.reader(file, delimiter='\t')
+        dic = {}
+        lista=[]
 
+        for row in lector:
+            letra = row[0]
+
+            if letra in dic:
+               dic[letra].append(int(row[1]))
+            else:
+               dic[letra] = [int(row[1])]
+    #No entiendo lista encima? []
+
+    dic_sorted = sorted(dic.items())
+
+    lista = list(dic_sorted)
+
+    lista_2 = []
+    for i in range(5):
+        lista_2 = lista_2 +[(lista[i][0], max(lista[i][1]), min(lista[i][1]))]
+    
+    return lista_2
 
 def pregunta_06():
     """
