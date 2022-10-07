@@ -46,16 +46,16 @@ def pregunta_02():
     with open('data.csv', 'r') as file:
         lector = csv.reader(file, delimiter='\t')
     
-    dic = {}
-    lista=[]
-    for row in lector:
-        letra = row[0]
+        dic = {}
+        lista=[]
+        for row in lector:
+            letra = row[0]
 
-        if letra in dic:
-           dic[letra] = dic[letra]+ 1
+            if letra in dic:
+               dic[letra] = dic[letra]+ 1
 
-        else:
-           dic[letra] = 1
+            else:
+               dic[letra] = 1
 
     dic_sorted = sorted(dic.items())
     
