@@ -224,8 +224,6 @@ def pregunta_06():
     for i in range(5):
         lista_2 = lista_2 +[(lista[i][0], max(lista[i][1]), min(lista[i][1]))]
 
-    
- 
     return lista_2
 
 
