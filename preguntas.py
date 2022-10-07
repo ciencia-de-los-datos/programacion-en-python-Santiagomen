@@ -77,20 +77,17 @@ def pregunta_03():
     ]
 
     """
-   import collections
-   import csv
-   with open('data.csv', 'r') as file:
-       lector = csv.reader(file, delimiter='\t')
-        dic = {}
-        lista=[]
-        for row in lector:
-            letra = row[0]
 
-            if letra in dic:
-               dic[letra] = dic[letra] + int(row[1])
+    dic = {}
+    lista=[]
+    for row in lector:
+        letra = row[0]
 
-            else:
-               dic[letra] = int(row[1])
+        if letra in dic:
+           dic[letra] = dic[letra] + int(row[1])
+
+        else:
+           dic[letra] = int(row[1])
 
     dic_sorted = sorted(dic.items())
     
@@ -119,19 +116,16 @@ def pregunta_04():
     ]
 
     """
-   import collections
-   import csv
-   with open('data.csv', 'r') as file:
-       lector = csv.reader(file, delimiter='\t')
+
         
-        dic2={}
-        lista=[]
-        for row in lector:
-            mes = row[2].split(sep = '-')[1]
-            if mes in dic2:
-               dic2[mes] = dic2[mes] + 1
-            else:
-               dic2[mes] = 1
+    dic2={}
+    lista=[]
+    for row in lector:
+        mes = row[2].split(sep = '-')[1]
+        if mes in dic2:
+           dic2[mes] = dic2[mes] + 1
+        else:
+           dic2[mes] = 1
 
     dic_sorted = sorted(dic2.items())
     
