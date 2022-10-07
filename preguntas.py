@@ -11,9 +11,6 @@ Utilice el archivo `data.csv` para resolver las preguntas.
 
 
 """
-import csv
-with open('data.csv', 'r') as file:
-     lector = csv.reader(file, delimiter='\t')
 
 
 def pregunta_01():
@@ -21,10 +18,14 @@ def pregunta_01():
     Retorne la suma de la segunda columna."
 
     Rta/214"""
-    
-aux = 0
-for row in lector:
-    aux = aux + int(row[1])
+
+import csv
+with open('data.csv', 'r') as file:
+    lector = csv.reader(file, delimiter='\t')
+
+    aux = 0
+    for row in lector:
+        aux = aux + int(row[1])
 
 return aux
 
