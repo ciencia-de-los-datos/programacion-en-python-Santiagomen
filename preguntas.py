@@ -19,9 +19,9 @@ def pregunta_01():
     with open('data.csv', 'r') as file:
         lector = csv.reader(file, delimiter='\t')
 
-    aux = 0
-    for row in lector:
-        aux = aux + int(row[1])
+        aux = 0
+        for row in lector:
+            aux = aux + int(row[1])
 
     return aux
 
