@@ -1,24 +1,21 @@
 """
 Laboratorio de Programación Básica en Python para Manejo de Datos
 -----------------------------------------------------------------------------------------
-
 Este archivo contiene las preguntas que se van a realizar en el laboratorio.
-
 No puede utilizar pandas, numpy o scipy. Se debe utilizar solo las funciones de python
 básicas.
-
 Utilice el archivo `data.csv` para resolver las preguntas.
-
-
 """
 
 
 def pregunta_01():
+    
     """
-    Retorne la suma de la segunda columna."
-
-    Rta/214"""
-
+    Retorne la suma de la segunda columna.
+    Rta/
+    214
+    """
+    
 import csv
 with open('data.csv', 'r') as file:
     lector = csv.reader(file, delimiter='\t')
