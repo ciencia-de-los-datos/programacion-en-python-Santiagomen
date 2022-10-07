@@ -78,16 +78,19 @@ def pregunta_03():
 
     """
 
-    dic = {}
-    lista=[]
-    for row in lector:
-        letra = row[0]
+    import collections
+    with open('data.csv', 'r') as file:
+        lector = csv.reader(file, delimiter='\t')
+        dic = {}
+        lista=[]
+        for row in lector:
+            letra = row[0]
 
-        if letra in dic:
-           dic[letra] = dic[letra] + int(row[1])
+            if letra in dic:
+               dic[letra] = dic[letra] + int(row[1])
 
-        else:
-           dic[letra] = int(row[1])
+            else:
+               dic[letra] = int(row[1])
 
     dic_sorted = sorted(dic.items())
     
