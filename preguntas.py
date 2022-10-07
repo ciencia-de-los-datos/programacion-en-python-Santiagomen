@@ -17,10 +17,7 @@ def pregunta_01():
     
     import csv
     with open('data.csv', 'r') as file:
-        lector = csv.reader(file, delimiter='\t')
-    lector = file.readlines()
-    lector = [line.replace("\n", "") for line in lector]
-    lector = [line.split("\t") for line in lector]
+    lector = csv.reader(file, delimiter='\t')
 
     aux = 0
     for row in lector:
