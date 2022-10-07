@@ -28,9 +28,9 @@ def pregunta_01():
         for row in lector:
             aux = aux + int(row[1])
 
-    aux
+    
     """
-    return
+    return aux
 
 
 def pregunta_02():
