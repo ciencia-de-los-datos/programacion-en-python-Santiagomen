@@ -18,15 +18,15 @@ def pregunta_01():
 import csv
 with open('data.csv', 'r') as file:
     lector = csv.reader(file, delimiter='\t')
-    lector = file.readlines()
-    lector = [line.replace("\n", "") for line in lector]
-    lector = [line.split("\t") for line in lector]
-    
-    aux = 0
-    for row in lector:
-        aux = aux + int(row[1])
+lector = file.readlines()
+lector = [line.replace("\n", "") for line in lector]
+lector = [line.split("\t") for line in lector]
 
-    return aux
+aux = 0
+for row in lector:
+    aux = aux + int(row[1])
+
+return aux
 
 
 def pregunta_02():
