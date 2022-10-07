@@ -240,16 +240,20 @@ def pregunta_07():
 
     """
    
-    dic = {}
-    lista=[]
+    import collections
+    import csv
+    with open('data.csv', 'r') as file:
+        lector = csv.reader(file, delimiter='\t')
+        dic = {}
+        lista=[]
 
-    for row in lector:
-        numero = row[1]
+        for row in lector:
+            numero = row[1]
 
-        if numero in dic:
-           dic[numero].append(row[0])
-        else:
-           dic[numero] = [(row[0])]
+            if numero in dic:
+               dic[numero].append(row[0])
+            else:
+               dic[numero] = [(row[0])]
 
     dic_sorted = sorted(dic.items())
     
@@ -279,21 +283,24 @@ def pregunta_08():
 
     """
  
-    dic = {}
-    lista=[]
+    import collections
+    with open('data.csv', 'r') as file:
+        lector = csv.reader(file, delimiter='\t')
+        dic = {}
+        lista=[]
 
-    for row in lector:
-        numero = row[1]
+        for row in lector:
+            numero = row[1]
 
-        if numero in dic:
-            if row[0] not in dic[numero]:
-              dic[numero].append(row[0])
-        else:
-           dic[numero] = [(row[0])]
+            if numero in dic:
+                if row[0] not in dic[numero]:
+                  dic[numero].append(row[0])
+            else:
+               dic[numero] = [(row[0])]
 
     ord ={k: sorted(v) for k,v in dic.items()}           
     dic_sorted = sorted(ord.items())
-    
+    dic_sorted
     return dic_sorted
 
 
