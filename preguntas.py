@@ -42,7 +42,10 @@ def pregunta_02():
 
     """
     import collections
-   
+    import collections
+    with open('data.csv', 'r') as file:
+        lector = csv.reader(file, delimiter='\t')
+    
     dic = {}
     lista=[]
     for row in lector:
