@@ -17,7 +17,7 @@ with open('data.csv', 'r') as file:
 
 
 def pregunta_01():
-    """
+    "
     Retorne la suma de la segunda columna.
 
     Rta/
@@ -28,7 +28,7 @@ for row in lector:
     aux = aux + int(row[1])
 
     
-    """
+    "
     return aux
 
 
