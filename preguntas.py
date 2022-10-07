@@ -42,7 +42,7 @@ def pregunta_02():
 
     """
     import collections
-    import collections
+    import csv
     with open('data.csv', 'r') as file:
         lector = csv.reader(file, delimiter='\t')
     
