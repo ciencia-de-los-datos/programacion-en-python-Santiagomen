@@ -265,6 +265,7 @@ def pregunta_07():
                dic[numero] = [(row[0])]
 
     dic_sorted = sorted(dic.items())
+    dic_sorted
     
     return dic_sorted
 
