@@ -26,7 +26,7 @@ with open('data.csv', 'r') as file:
     for row in lector:
         aux = aux + int(row[1])
 
-return aux
+    return aux
 
 
 def pregunta_02():
