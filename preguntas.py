@@ -300,7 +300,7 @@ def pregunta_08():
         lista=[]
 
         for row in lector:
-            numero = int(row[1])
+            numero = row[1]
 
             if numero in dic:
                 if row[0] not in dic[numero]:
