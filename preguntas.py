@@ -257,7 +257,7 @@ def pregunta_07():
         lista=[]
 
         for row in lector:
-            numero = int(row[1])
+            numero = row[1]
 
             if numero in dic:
                dic[numero].append(row[0])
