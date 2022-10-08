@@ -221,8 +221,8 @@ def pregunta_06():
     lista = list(dic_sorted)
 
     lista_2 = []
-    for i in range(5):
-        lista_2 = lista_2 +[(lista[i][0], max(lista[i][1]), min(lista[i][1]))]
+    for i in range(10):
+        lista_2 = lista_2 +[(lista[i][0], min(lista[i][1]), max(lista[i][1]))]
 
     return lista_2
 
@@ -265,7 +265,6 @@ def pregunta_07():
                dic[numero] = [(row[0])]
 
     dic_sorted = sorted(dic.items())
-    dic_sorted
     
     return dic_sorted
 
