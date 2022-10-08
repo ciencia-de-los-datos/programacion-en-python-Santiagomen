@@ -249,7 +249,7 @@ def pregunta_07():
 
     """
    
-   import collections
+    import collections
     import csv
     with open('data.csv', 'r') as file:
         lector = csv.reader(file, delimiter='\t')
@@ -257,7 +257,7 @@ def pregunta_07():
         lista=[]
 
         for row in lector:
-            numero = row[1]
+            numero = int(row[1])
 
             if numero in dic:
                dic[numero].append(row[0])
@@ -300,7 +300,7 @@ def pregunta_08():
         lista=[]
 
         for row in lector:
-            numero = row[1]
+            numero = int(row[1])
 
             if numero in dic:
                 if row[0] not in dic[numero]:
